@@ -19,10 +19,8 @@ pub fn Home() -> impl IntoView {
         <span class="countdown font-mono text-6xl">
             <span style=("--value", countdown)></span>
         </span>
-        <Show
-        when=move || {is_over()}
-        >
-        <p>Bravo</p>
+        <Show when=move || { is_over() }>
+            <p>Bravo</p>
         </Show>
     }
 }
