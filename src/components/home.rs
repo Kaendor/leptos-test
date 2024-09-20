@@ -6,6 +6,7 @@ pub fn Home() -> impl IntoView {
 
     let is_over = move || countdown.get() <= 0;
 
+    // The show component avoid massive rerendering
     view! {
         <button
             class=("text-white", move || countdown.get() % 2 == 1)
